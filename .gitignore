@@ -1,0 +1,10 @@
+# Backend ignores
+__pycache__/
+venv/
+.env
+*.sqlite3
+
+# Frontend ignores
+node_modules/
+dist/
+.DS_Storegit
