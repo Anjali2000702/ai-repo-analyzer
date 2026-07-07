@@ -1,0 +1,15 @@
+after backend files
+like main.py
+extractor.py
+github_handler.py
+indexer.py
+
+then if you run the server and try and executer the github repo
+then a new file is creadted i.e: chroma_db
+and in that file you will see the chunks 
+right now, your backend can download , clean and store code perfectly but if a user asks a question, we don't have an Ai hooked up to read that daatabse and genrate a huma like answer yet
+
+now to build the brain of out RAG pipeline we need to generate an API key for a large language model 
+we have two options : groq api and gemini api
+
+log in to consolegrok and creake the api key form there

@@ -1,10 +1,13 @@
-# Backend ignores
-__pycache__/
+# Environments
+ai_env/
 venv/
-.env
-*.sqlite3
-
-# Frontend ignores
 node_modules/
+
+# Secrets
+.env
+
+# Database and Cache
+backend/chroma_db/
+.DS_Store
 dist/
-.DS_Storegit
+.vite/
