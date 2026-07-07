@@ -1,6 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 import { useState } from 'react'
-
+import Typewriter from './Typewriter';
 
 function App() {
   // 1. React State: Memory to hold our variables
@@ -104,8 +104,12 @@ function App() {
               <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0 ${msg.sender === "human" ? "bg-green-500" : "bg-blue-500"}`}>
                 {msg.sender === "human" ? "U" : "AI"}
               </div>
-              <div className={`p-4 rounded-lg ...`}>
-                <ReactMarkdown>{msg.text}</ReactMarkdown>
+              <div className={`p-4 rounded-lg max-w-3xl text-sm leading-relaxed ${msg.sender === "human" ? "bg-green-900/30 rounded-tr-none border border-green-800" : "bg-gray-800 rounded-tl-none border border-gray-700"}`}>
+              {msg.sender === "ai" ? (
+              <Typewriter text={msg.text} />
+              ) : (
+              <ReactMarkdown>{msg.text}</ReactMarkdown>
+              )}
               </div>
             </div>
           ))}
