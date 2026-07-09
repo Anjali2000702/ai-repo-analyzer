@@ -100,9 +100,9 @@ app = FastAPI(title="AI Repo Analyzer API")
 # Configure CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://ai-repo-analyzer-1.onrender.com"],  
+    allow_origins=["*"],  
     allow_credentials=True,
-    allow_methods=["*"],  
+    allow_methods=["GET", "POST","OPTIONS"],  
     allow_headers=["*"],
 )
 
