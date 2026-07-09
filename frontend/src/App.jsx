@@ -20,7 +20,7 @@ function App() {
     
     setIsAnalyzing(true)
     try {
-      const response = await fetch("https://ai-repo-analyzer-o0zo.onrender.com", {
+      const response = await fetch("https://ai-repo-analyzer-o0zo.onrender.com/process-github-repo", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ github_url: githubUrl })
