@@ -88,6 +88,24 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+# Import our custom worker scripts
+import github_handler
+import extractor
+import indexer
+import rag_core  # <-- NEW: Importing our AI brain!
+
+# Initialize the backend application
+app = FastAPI(title="AI Repo Analyzer API")
+
+# Configure CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://ai-repo-analyzer-1.onrender.com"],  
+    allow_credentials=True,
+    allow_methods=["*"],  
+    allow_headers=["*"],
+)
+
 
 # Expected JSON format for processing a repo
 class RepoRequest(BaseModel):
