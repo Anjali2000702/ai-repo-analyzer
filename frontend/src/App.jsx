@@ -20,7 +20,7 @@ function App() {
     
     setIsAnalyzing(true)
     try {
-      const response = await fetch("http://localhost:8000/process-github-repo", {
+      const response = await fetch("https://ai-repo-analyzer-o0zo.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ github_url: githubUrl })
@@ -48,7 +48,7 @@ function App() {
     setIsAsking(true)
 
     try {
-      const response = await fetch("http://localhost:8000/ask", {
+      const response = await fetch("https://ai-repo-analyzer-o0zo.onrender.com/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: userMessage.text })
