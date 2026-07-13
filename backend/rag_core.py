@@ -152,8 +152,8 @@ def answer_question(question: str) -> str:
     # 2. Re-initialize the exact same embedding method we used to save the data
     # Using the HF Inference API instead of loading the model locally — saves RAM
     embeddings = HuggingFaceEndpointEmbeddings(
-        model="sentence-transformers/all-MiniLM-L6-v2",
-        huggingfacehub_api_token=os.environ.get("HF_TOKEN"),
+    model="sentence-transformers/all-MiniLM-L6-v2",
+    huggingfacehub_api_token=os.environ.get("HF_TOKEN", "").strip(),
     )
     db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embeddings)
     

@@ -174,8 +174,8 @@ def create_vector_db(extracted_folder_path: str):
     # Ab local model load NAHI hoga — HF ke API se embeddings generate honge
     print("Initializing Embedding Model via HuggingFace Inference API...")
     embeddings = HuggingFaceEndpointEmbeddings(
-        model="sentence-transformers/all-MiniLM-L6-v2",
-        huggingfacehub_api_token=os.environ.get("HF_TOKEN"),
+    model="sentence-transformers/all-MiniLM-L6-v2",
+    huggingfacehub_api_token=os.environ.get("HF_TOKEN", "").strip(),
     )
 
     print("Saving to Chroma Vector Database...")
