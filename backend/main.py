@@ -104,7 +104,7 @@ app = FastAPI(title="AI Repo Analyzer API")
 # Configure CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  
+    allow_origins=["https://ai-repo-analyzer-chi.vercel.app/"],  
     allow_credentials=True,
     allow_methods=["*"],  
     allow_headers=["*"],
