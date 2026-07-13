@@ -1,6 +1,23 @@
---extra-index-url https://download.pytorch.org/whl/cpu
-torch
-torchvision
+# --extra-index-url https://download.pytorch.org/whl/cpu
+# torch
+# torchvision
+# fastapi
+# uvicorn
+# python-multipart
+# requests
+# python-dotenv
+# langchain
+# langchain-core
+# langchain-community
+# langchain-huggingface
+# langchain-chroma
+# chromadb
+# groq
+# langchain-text-splitters
+# sentence-transformers
+# langchain-groq
+
+
 fastapi
 uvicorn
 python-multipart
@@ -14,5 +31,4 @@ langchain-chroma
 chromadb
 groq
 langchain-text-splitters
-sentence-transformers
 langchain-groq
