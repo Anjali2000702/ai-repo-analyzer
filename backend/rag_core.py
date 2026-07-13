@@ -188,4 +188,6 @@ def answer_question(question: str) -> str:
     print(f"Asking Groq: {question}")
     response = rag_chain.invoke({"input": question})
     
-    return response["answer"]
+    return response["answer"]git add .
+git commit -m "Use HuggingFace Inference API for embeddings in both indexer and rag_core to fix memory issue"
+git push origin main
